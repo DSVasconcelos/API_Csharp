@@ -1,0 +1,62 @@
+Data:2024-06-28 18:01:15
+Mensagem:Falha ao converter valor de parâmetro de String em Int32.
+StackTrace   em System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   em System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   em System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   em System.Data.SqlClient.SqlCommand.BuildParamList(TdsParser parser, SqlParameterCollection parameters, Boolean includeReturnValue)
+   em System.Data.SqlClient.SqlCommand.BuildExecuteSql(CommandBehavior behavior, String commandText, SqlParameterCollection parameters, _SqlRPC& rpc)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader()
+   em web_avaliacao4.Repositories.SQLServer.Veiculo.Select(String Nome) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Repositories\SQLServer\Veiculo.cs:linha 102
+   em web_avaliacao4.Controllers.VeiculosController.Get(String Nome) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Controllers\VeiculosController.cs:linha 60
+Data:2024-06-28 18:24:46
+Mensagem:A consulta parametrizada '(@Marca varchar(10),@Nome varchar(5),@AnoModelo int,@DataFabrica' espera o parâmetro '@Opcionais', que não foi fornecido.
+StackTrace   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   em web_avaliacao4.Repositories.SQLServer.Veiculo.Update(Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Repositories\SQLServer\Veiculo.cs:linha 168
+   em web_avaliacao4.Controllers.VeiculosController.Put(Int32 id, Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Controllers\VeiculosController.cs:linha 99
+Data:2024-06-28 18:24:52
+Mensagem:A consulta parametrizada '(@Marca varchar(10),@Nome varchar(5),@AnoModelo int,@DataFabrica' espera o parâmetro '@Opcionais', que não foi fornecido.
+StackTrace   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   em web_avaliacao4.Repositories.SQLServer.Veiculo.Update(Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Repositories\SQLServer\Veiculo.cs:linha 168
+   em web_avaliacao4.Controllers.VeiculosController.Put(Int32 id, Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Controllers\VeiculosController.cs:linha 99
+Data:2024-06-28 18:25:40
+Mensagem:A consulta parametrizada '(@Marca varchar(10),@Nome varchar(5),@AnoModelo int,@DataFabrica' espera o parâmetro '@Opcionais', que não foi fornecido.
+StackTrace   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   em web_avaliacao4.Repositories.SQLServer.Veiculo.Update(Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Repositories\SQLServer\Veiculo.cs:linha 168
+   em web_avaliacao4.Controllers.VeiculosController.Put(Int32 id, Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Controllers\VeiculosController.cs:linha 99
+Data:2024-06-28 18:29:30
+Mensagem:A consulta parametrizada '(@Marca varchar(10),@Nome varchar(5),@AnoModelo int,@DataFabrica' espera o parâmetro '@Opcionais', que não foi fornecido.
+StackTrace   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   em System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   em web_avaliacao4.Repositories.SQLServer.Veiculo.Update(Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Repositories\SQLServer\Veiculo.cs:linha 168
+   em web_avaliacao4.Controllers.VeiculosController.Put(Int32 id, Veiculo veiculo) na C:\Users\Danilo\Desktop\avaliacao4\api\web-avaliacao4\web-avaliacao4\Controllers\VeiculosController.cs:linha 99
